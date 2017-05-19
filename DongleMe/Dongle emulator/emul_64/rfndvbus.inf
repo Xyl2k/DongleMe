@@ -1,0 +1,62 @@
+; Copyright (c) 2004-2011 Chingachguk & Denger2k. All rights reserved
+;
+; INF file for installing USB rfndvbus driver
+
+[Version]
+Signature="$WINDOWS NT$"
+
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+
+Provider=%MSFT%
+DriverVer=11/11/2012,1.0.0.0000
+CatalogFile=rfndvbus.cat
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+rfndvbus.sys  = 1,,
+
+[Manufacturer]
+%StdMfg%=Standard,NTx86, NTia64, NTamd64
+
+[Standard]
+%rfndvbus.DeviceDesc%=rfndvbus_Device, root\rfndvbus
+
+[Standard.NTx86]
+%rfndvbus.DeviceDesc%=rfndvbus_Device, root\rfndvbus
+
+[Standard.NTia64]
+%rfndvbus.DeviceDesc%=rfndvbus_Device, root\rfndvbus
+
+[Standard.NTamd64]
+%rfndvbus.DeviceDesc%=rfndvbus_Device, root\rfndvbus
+
+[rfndvbus_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+rfndvbus.sys
+
+[rfndvbus_Device.NT.Services]
+AddService = rfndvbus,%SPSVCINST_ASSOCSERVICE%, rfndvbus_Service_Inst
+
+[rfndvbus_Service_Inst]
+DisplayName    = %rfndvbus.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\rfndvbus.sys
+LoadOrderGroup = Extended Base
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+MSFT = "RENGTEAM"
+StdMfg = "(Standard system devices)"
+DiskId1 = "USB rfndvbus Installation Disk #1"
+rfndvbus.DeviceDesc = "USB rfndvbus"
+rfndvbus.SVCDESC = "USB rfndvbus"

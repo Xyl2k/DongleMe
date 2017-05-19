@@ -1,0 +1,3 @@
+"Cleaner" %WINDIR%\INF directory for old emulator *.inf/pnf files.
+Strongly recomended to use before install new emulator driver,
+AFTER uninstall old driver.
