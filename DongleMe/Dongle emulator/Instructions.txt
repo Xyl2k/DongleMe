@@ -12,3 +12,10 @@ Unplug original dongle !
 5. Install emulator with EmulSetup.exe (if you use old OS like Windows XP - use emul_xx\_install.cmd batch files).
 
 Verify install emulator with TestEmulator.exe (you should get message "Dongle function OK")
+
+-----
+
+Basic PW1: 4839
+Basic PW2: 4BBB
+Adv. PW1: 4B31
+Adv. PW2: 4847
