@@ -1,0 +1,14 @@
+For x64 you need enable Test Mode Windows (is must) -
+(See here: http://www.rengteam.com/wp/help/knowledge-base/how-to-disable-driver-signature-enforcement/).
+
+Basically you need do.
+
+Unplug original dongle !
+
+1. SetSecurity64v3\_prereqSet64v3-10.cmd - Right click "Run as administrator"
+2. Restart PC
+3. After restart assure you see "Test mode" in lower right Windows desktop corner.
+4. Act_ANYPC_5F0E5CA0_.reg -> double click it and answer "Yes" to import registry.
+5. Install emulator with EmulSetup.exe (if you use old OS like Windows XP - use emul_xx\_install.cmd batch files).
+
+Verify install emulator with TestEmulator.exe (you should get message "Dongle function OK")

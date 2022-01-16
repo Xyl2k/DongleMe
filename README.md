@@ -1,9 +1,33 @@
-DongleMe
-=========
+# DongleMe
 
-Just a bit of code to test Feitian Rockey4ND dongle, nothing really interesting.
-That just some materials i did for a presentation and a paper (private sorry) about software protection in general.
+## INTRODUCTION
 
-You need to provide p1,p2,p3,p4 into base.asm with your dongle info, i've also included an example of envelopped program and his emulator.
+This project uses the [MASM32 SDK](https://www.masm32.com/) and [WinASM](https://code.google.com/archive/p/winasm-studio/).  
+  
+That just some materials i did for a presentation and a paper (private sorry) about software protection for a con in 2017.  
+This repository include code projects in assembly to try my Rockey4ND dongle and an emulator tied to it compatible with theses codes.
 
-![dongleme1](https://cloud.githubusercontent.com/assets/8536299/26240010/ca3c593c-3c7f-11e7-8a05-60f5e267a9c2.png)
+## BUILDING
+
+There is a file, called **make.bat**, which will build the executable file for theses projects.  
+Reading this file is the way to understand the build process.
+
+- /DongleAPI/  - Utility to try to interact with a plugged dongle
+- /DongleTest/ - Utility doing multiple write/read operations, based on the Feitian SDK V1.30 examples
+- /DongleMe/Envelope/ - Empty shell, for the Feitian Shell Protect Center 1.0.10.105
+- /DongleMe/NoEnvelope/ - Very basic example on how to tie a program to a dongle without Feitian Shell Protect Center
+- /DongleDump/ - Utility to dump the memory zone 1 and memory zone 2 of a Rockey4ND dongle
+
+## WHAT'S INTERESTING?
+
+You will have fews examples on how to import the ROCKEY4ND DLL API Library in ressouce, drop it and load it.  
+Another interesting code can be my procedure to retrieve P1, P2 from an input and move it into a DW variable.  
+DongleDump include few procedures to hex write and wrap the text with comas, backward slash and carriage return.
+
+If you want to play with my emulated dongle the 4 passwords are:  
+P1: **4839**  
+P2: **4BBB**  
+P3: **4B31**  
+P4: **4847**  
+
+![DongleMe](preview.png "Compiled codes preview")
