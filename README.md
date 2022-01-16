@@ -20,9 +20,9 @@ Reading this file is the way to understand the build process.
 
 ## WHAT'S INTERESTING?
 
-You will have fews examples on how to import the ROCKEY4ND DLL API Library in ressouce, drop it and load it.  
-Another interesting code can be my procedure to retrieve P1, P2 from an input and move it into a DW variable.  
-DongleDump include few procedures to hex write and wrap the text with comas, backward slash and carriage return.
+You will have fews examples on how to [import](/DongleMe/NoEnvelope/dongleme.asm#L125) the ROCKEY4ND DLL API Library in ressouce, drop it and load it.  
+Another interesting code can be my [procedure](/DongleAPI/dongleapi.asm#L75) who take P1 and P2 from user and move it into a DW variable.  
+DongleDump include also a procedure who hex write and another for [wrapping the text](/DongleDump/dongleDump.asm#L308) with comas, backward slash and carriage return.
 
 If you want to play with my emulated dongle the 4 passwords are:  
 P1: **4839**  
